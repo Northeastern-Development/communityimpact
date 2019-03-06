@@ -15,7 +15,7 @@
       <div class="ci__wrapper-element-copy">
           <p>Northeastern invests $13.5 million in full&ndash;tuition scholarships for Boston Public Schools students and other Boston&ndash;area residents. Northeastern currently provides:</p>
 
-          <ul>
+          <ul role="list">
             <li>150 full&ndash;tuition need&ndash;based scholarships to Boston Public Schools graduates, including 30 new scholarships since 2014 for students who live in neighborhoods surrounding our Boston campus</li>
             <li>Additional scholarships awarded to BPS valedictorians and graduates in the top 10 percent of their class </li>
             <li>Multiple college&ndash;readiness events on campus for BPS students</li>

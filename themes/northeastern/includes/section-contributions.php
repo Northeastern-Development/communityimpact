@@ -19,7 +19,7 @@
         </div>
       </div>
         <p>The School of Law spends more than $1 million annually on legal aid clinics to assist local community members on issues of social justice, domestic violence, and public health, among other issues. The university also houses the Edward M. Kennedy Academy for Health Careers, a college preparatory high school for Boston students exploring careers in health and health&ndash;related professions. In addition, Northeastern frequently opens its doors to the community by making university space available by hosting: </p>
-        <ul>
+        <ul role="list">
           <li>health fairs</li>
           <li>park cleanups</li>
           <li>Lorem ipsum dolor sit amet</li>
