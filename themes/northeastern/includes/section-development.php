@@ -19,7 +19,7 @@
       <div class="ci__stat-block">
         <div>
           <small><?=$stat_block_line_1;?></small>
-          <h4><?=$stat_block_line_2;?></h4>
+          <h3><?=$stat_block_line_2;?></h3>
         </div>
       </div>
     </div>
@@ -28,15 +28,15 @@
 <div class="ci__wrapper-element-fullwidth">
   <div>
     <div>
-      <h4>$65M</h4>
+      <h3>$65M</h3>
       <small>with underrepresented businesses in Boston</small>
     </div>
     <div>
-      <h4>$37.8M</h4>
+      <h3>$37.8M</h3>
       <small>went to women&ndash; and minority&ndash;owned businesses</small>
     </div>
     <div>
-      <h4>$27M</h4>
+      <h3>$27M</h3>
       <small>was spent with local and small businesses</small>
     </div>
   </div>

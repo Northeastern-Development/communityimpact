@@ -11,11 +11,11 @@
     <div class="ci__wrapper-element">
       <div class="ci__wrapper-element-copy">
         <h2><span><?=$section_title_line_1;?></span></h2>
-        <h3><?=$section_sub_title;?></h3>
+        <h3 style="margin-top:18px;"><?=$section_sub_title;?></h3>
         <div class="ci__stat-block-large">
           <div class="ci__stat-wrap">
             <div>
-              <h4><?=$stat_block_line_1;?></h4>
+              <h3><?=$stat_block_line_1;?></h3>
               <small><?=$stat_block_line_2;?></small>
             </div>
           </div>

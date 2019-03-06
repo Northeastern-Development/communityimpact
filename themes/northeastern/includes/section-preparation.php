@@ -14,7 +14,7 @@
         <div class="ci__stat-block-large">
           <div class="ci__stat-wrap">
             <div>
-              <h4>85%</h4>
+              <h3>85%</h3>
               <small>completion rate for YDIP, which provides tutoring and advising to BPS students to prepare them for college</small>
             </div>
           </div>
@@ -27,7 +27,7 @@
         <div class="ci__stat-block">
           <div>
             <small><?=$stat_block_line_1;?></small>
-            <h4><?=$stat_block_line_2;?></h4>
+            <h3><?=$stat_block_line_2;?></h3>
           </div>
         </div>
       </div>

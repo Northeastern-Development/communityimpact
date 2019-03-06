@@ -28,7 +28,7 @@ main{
         &-copy {
           margin:0 0 0 0;
           & h3 {
-            margin-top:18px;
+            // margin-top:18px;
             @include font-5b-l;
           }
           @media only screen and (max-width: nth($breakpoint,1)){
@@ -181,7 +181,7 @@ main{
           line-height:0;
         }
       }
-      & > h4 {
+      & > h3 {
          max-width: 100%;
          @include font-9b-c;
          line-height:0;
@@ -189,13 +189,13 @@ main{
          margin-top:nth($gutter,1);
       }
       @media only screen and (max-width: nth($breakpoint,1)){
-        & > h4 {
+        & > h3 {
          @include font-6b-c;
          line-height:0;
         }
       }
       @media only screen and (max-width: nth($breakpoint,2)){
-        & > h4 {
+        & > h3 {
          @include font-5b-c;
          line-height:0;
         }

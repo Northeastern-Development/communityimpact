@@ -154,7 +154,7 @@
   		 */
   		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
-      $attributes = '  href="'.$item->url.'" title="'.$item->attr_title.'" aria-label = "'.$item->attr_title.'" ';
+      $attributes = '  target="'.$item->target.'" href="'.$item->url.'" title="'.$item->attr_title.'" aria-label = "'.$item->attr_title.'" ';
 
 
   		$item_output = $args->before;

@@ -41,7 +41,7 @@
         <div class="ci__stat-block">
           <div>
             <small><?=$stat_block_line_1;?></small>
-            <h4><?=$stat_block_line_2;?></h4>
+            <h3><?=$stat_block_line_2;?></h3>
           </div>
         </div>
         <h2><span><?=$section_title_line_1;?><br/> <?=$section_title_line_2;?></span></h2>

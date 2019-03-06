@@ -50,17 +50,17 @@
     width:100%;
     margin:0 nth($gutter,1);
     text-align:center;
-    & > h4 {
+    & > h3 {
       @include font-9b-c;
       text-transform: uppercase;
     }
     @media only screen and (max-width: nth($breakpoint,1)){
-      & > h4 {
+      & > h3 {
        @include font-6b-c;
       }
     }
     @media only screen and (max-width: nth($breakpoint,2)){
-      & > h4 {
+      & > h3 {
        @include font-5b-c;
       }
     }

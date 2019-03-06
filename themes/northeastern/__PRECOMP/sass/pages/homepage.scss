@@ -567,17 +567,17 @@ main {
           &:last-of-type {
             border-right:none;
           }
-          & > h4 {
+          & > h3 {
             @include font-9b-c;
             text-transform: uppercase;
           }
           @media only screen and (max-width: nth($breakpoint,1)){
-            & > h4 {
+            & > h3 {
              @include font-6b-c;
             }
           }
           @media only screen and (max-width: nth($breakpoint,2)){
-            & > h4 {
+            & > h3 {
              @include font-5b-c;
             }
           }
@@ -684,6 +684,8 @@ main {
         &-element {
           &-copy{
             margin:0 $copyGutter 0 $copyGutter;
+            
+
               & > div.ci__stat-block-large {
                 margin:nth($gutter,2) 0 nth($gutter,2) 0;
                 & > div.ci__stat-wrap {

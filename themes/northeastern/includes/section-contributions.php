@@ -14,7 +14,7 @@
         <div class="ci__stat-wrap">
           <div>
             <small><?=$stat_block_line_1;?></small>
-            <h4><?=$stat_block_line_2;?></h4>
+            <h3><?=$stat_block_line_2;?></h3>
           </div>
         </div>
       </div>
