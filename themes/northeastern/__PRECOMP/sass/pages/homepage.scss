@@ -1,0 +1,1725 @@
+main {
+  // A SECTIONS
+  $columns:2;
+  $sectionWidth: 100vw;//100vw
+  $columnImg: 40vw;//40vw
+  $columnCopy: 40vw;//40vw
+  $copyGutter: ((($sectionWidth - $columnImg) - $columnCopy) / $columns);
+  // HERO SECTION
+  section.hero {
+    height:415px;
+    position: relative;
+    padding:0;
+    margin-bottom:0;
+    & > div.herocopy {
+      height:100%;
+      width:60%;
+      position: absolute;
+      z-index:10;
+      height: 100%;
+      bottom: 0;
+      background: linear-gradient(to left,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 60%);
+      & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin:0 $copyGutter;
+        height:100%;
+        width:80%;
+        color: rgba($brand_colors-white,1.0);
+        & > h1 {
+          @include font-9b-l;
+        }
+        @media only screen and (max-width: nth($breakpoint,1)){
+          & > h1 {
+            @include font-6b-l;
+          }
+        }
+        @media only screen and (max-width: nth($breakpoint,2)){
+          & > h1 {
+            @include font-5b-l;
+          }
+        }
+        & > p {
+          margin: nth($gutter,3) 0 0 0;
+          @include font-2b-l;
+          width:75%;
+        }
+      }
+    }
+    & > div.bgimage {
+      @include bgimage;
+    }
+  }
+
+
+  // INVESTING IN BOSTON
+  section.investing {
+    // A SECTIONS
+    h2 {
+      line-height:inherit;
+    }
+    background: rgba($brand_colors-white, 1.0);
+    & .ci__wrapper {
+      padding: 0;
+      margin-bottom:nth($gutter,6);
+      &-element {
+        &-copy{
+          margin:nth($gutter,4) $copyGutter 0 $copyGutter;
+            & > div.ci__stat-block-large {
+              @include stat-block-large;
+              margin-bottom:nth($gutter,1);
+              & > div.ci__stat-wrap {
+                @include stat-block-large-wrap;
+                & > div {
+                  & > small {
+                    text-transform: inherit;
+                  }
+                }
+              }
+            }
+        }
+        &:first-child {//copy
+          flex: 1;
+          order: 1;
+          width:$columnCopy;
+        }
+        &:last-child {//img
+          order: 2;
+          margin: 0 0 0 0;
+          width: $columnImg;
+          max-height:1800px;
+          //height: 80vw;
+          & > div {
+            @include bgimage;
+          }
+        }
+      }
+    }
+  }
+
+
+  // TRANSFORMING THE COLUMBUS CORRIDOR
+  section.transforming {
+    // A SECTIONS
+    background: rgba($brand_colors-beige, 0.3);
+    &  h2 {
+      & > span {
+        margin:nth($gutter,3) 0 0 0;
+      }
+    }
+    & .ci__wrapper {
+      padding: 80px 0 80px 0;
+      width: $content-width-full;
+      margin:0 auto;
+      &-element {
+        &-copy{
+          margin:0 $copyGutter 0 $copyGutter;
+          & > div.ci__title-box {
+            width:100%;
+            display:flex;
+            flex-wrap: nowrap;
+            &  div.ci__stat-block {
+              margin:0 nth($gutter,1) 0 0;
+            }
+          }
+          & > p {
+            &:first-of-type {
+              margin-top:nth($gutter,1);
+            }
+          }
+        }
+        &:first-child {//copy
+          flex: 1;
+          order: 2;
+          width:$columnCopy;
+        }
+        &:last-child {//img
+          order: 1;
+          margin: 0 0 0 0;
+          width: $columnImg;
+          height: 45vw;
+          & > div {
+            @include bgimage;
+          }
+        }
+      }
+    }
+  }
+
+
+  // AN ENDURING PARTNERSHIP
+  section.partnership {
+    // A SECTIONS
+    background: rgba($brand_colors-white, 1.0);
+    & .ci__wrapper {
+      padding: 0 0 0 0;
+      margin: 0 auto 0 auto;
+      &-element {
+        &-copy{
+          margin:nth($gutter,6) $copyGutter nth($gutter,6) $copyGutter;
+          width:$columnCopy;
+          & > div.ci__stat-block-large {
+            @include stat-block-large;
+            & > div.ci__stat-wrap {
+              @include stat-block-large-wrap;
+              & > div {
+                & > small {
+                  text-transform: inherit;
+                }
+              }
+            }
+          }
+        }
+        &:first-child {
+          flex:1;
+          order: 2;
+        }
+        &:last-child {
+          order: 1;
+          margin: 0 0 0 0;
+          width: $columnCopy;
+          //height:70vw;
+          & > div {
+            @include bgimage;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+main {
+  $columns:2;
+  $sectionWidth: 80vw;//94vw
+  $columnImg: 30vw;//37vw
+  $columnCopy: 30vw;//40vw
+  $copyGutter: ((($sectionWidth - $columnImg) - $columnCopy) / $columns);
+  // COMMUNITY SERVICE
+  section.community {
+    // B SECTIONS
+    background: rgba($brand_colors-white, 1.0);
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      &-element {
+        &-copy{
+          & > ul {
+            & > li {
+              color:$brand_colors-black;
+              //margin:0;
+              &:first-child {
+              }
+            }
+          }
+          & > div.ci__title-box {
+            display: none;
+          }
+
+        }
+        &:first-child {//copy
+          flex:1;
+          order: 2;
+          width: $columnCopy;
+          margin:0 0 0 $copyGutter;
+        }
+        &:last-child {//img/title
+          order: 1;
+          margin: 0 0 0 0;
+          width: $columnImg;
+          & > div {
+            // width:$columnImg;
+            // height:$columnImg;
+            width:28.7vw;
+            height:$columnImg;
+            z-index:0;
+            position:relative;
+            margin-top:nth($gutter,3);
+            & > div.bgimage {
+              @include bgimage;
+              top:nth($gutter,3);
+              left:nth($gutter,1);
+            }
+            & > div.ci__title-box {
+              position:relative;
+              z-index:100;
+              & div.ci__stat-block {
+                margin:0 0 0 0;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  // MUNICIPAL SUPPORT
+  section.municipal {
+    // B SECTIONS
+    background: rgba($brand_colors-white, 1.0);
+    &  h2 {
+      & > span {
+        margin:nth($gutter,3) 0 0 0;
+      }
+    }
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      &-element {
+        &-copy{
+          & > div.ci__title-box {
+            width:100%;
+            height:210px;
+            &  div.ci__stat-block {
+              margin:0 nth($gutter,3) 0 0;
+            }
+          }
+        }
+        &:first-child {
+          flex:1;
+          order: 1;
+          width: $columnCopy;
+          margin:0 $copyGutter 0 0;
+        }
+        &:last-child {
+          order: 2;
+          margin: 0 0 0 0;
+          width: $columnImg;
+          height: $columnImg;
+          & > div {
+            @include bgimage;
+          }
+        }
+      }
+    }
+  }
+
+
+  // IN-KIND CONTRIBUTIONS
+  section.contributions {
+    // B SECTIONS
+      background: rgba($brand_colors-beige, 0.3);
+      & .ci__wrapper {
+        padding: nth($gutter,6) 0 nth($gutter,6) 0;
+        margin: 0 auto 0 auto;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            & > div.ci__stat-block-large {
+              @include stat-block-large;
+              margin-top:0;
+              & > div.ci__stat-wrap {
+                @include stat-block-large-wrap;
+
+              }
+            }
+            & h2 {
+              display:none;
+            }
+            & > p {
+             margin:nth($gutter,1) 0 0 0;
+            }
+            & > ul {
+              & > li {
+                margin:0;
+                &:first-child {
+                }
+              }
+            }
+          }
+          &:first-child {//copy
+            flex:1;
+            order: 2;
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:last-child {//img/title
+            order: 1;
+            margin: 0 0 0 0;
+            width: $columnImg;
+            & > div {
+              width:$columnImg;
+              height:$columnImg;
+              z-index:0;
+              position:relative;
+              margin-top:nth($gutter,3);
+              & > div.bgimage {
+                @include bgimage;
+                top:nth($gutter,3);
+              }
+              & > div.ci__title-box {
+                margin-left:-15px;
+                position:relative;
+                z-index:100;
+                & div.ci__stat-block {
+                  margin:0 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+
+  // ECONOMIC IMPACT
+  section.economic {
+    // B SECTIONS
+    background: rgba($brand_colors-white, 1.0);
+    & > div.bgimage {
+        @include bgimage;
+    }
+    & > div.bg-gradient {
+      height:100%;
+      width:80%;
+      position: absolute;
+      z-index:0;
+      height: 100%;
+      bottom: 0;
+      background: linear-gradient(to left,rgba(0,0,0,0) 0%,rgba(0,0,0,.7) 80%);
+    }
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      &-element {
+
+        &-copy{
+          & > h2 {
+            color:rgba($brand_colors-white,1.0);
+            & > span {
+
+              &:after {
+                border-bottom:5px solid rgba($brand_colors-red,1.0);
+              }
+            }
+          }
+          & > p {
+           color:rgba($brand_colors-white,1.0);
+           & > span {
+             color:rgba($brand_colors-white,1.0);
+           }
+           & > a {
+             color:rgba($brand_colors-white,1.0);
+             &:hover {
+               color:rgba($brand_colors-red,1.0);
+             }
+           }
+          }
+        }
+        &:first-child {
+          width:$columnCopy;
+          flex:1;
+          order: 1;
+          margin:0 $copyGutter 0 0;
+        }
+        &:last-child {
+          order: 2;
+          margin: 0 0 0 0;
+          width:$columnCopy;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+main {
+  $columns:2;
+  $sectionWidth: 80vw;//94vw
+  $columnImg: 12vw;//12vw
+  $columnCopy: 60vw;//60vw
+  $copyGutter: ((($sectionWidth - $columnImg) - $columnCopy) / $columns);
+  // FULL TUITION SCHOLARSHIPS
+  section.scholarships {
+    // C SECTIONS
+    background: rgba($brand_colors-white, 1.0);
+    & > div.bgimage {
+        @include bgimage;
+    }
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      &-element {
+        &-copy{
+          & > div.ci__stat-block-large {
+            @include stat-block-large;
+            & > div.ci__stat-wrap {
+              @include stat-block-large-wrap;
+              & > div {
+                & > small {
+                  text-transform: inherit;
+                }
+              }
+            }
+          }
+        }
+        &:first-child {//copy
+          flex:1;
+          order: 2;
+          width: $columnCopy;
+          margin:0 0 0 $copyGutter;
+        }
+        &:last-child {//title
+          order: 1;
+          margin: 0 0 0 0;
+          width: auto;
+          & > div.ci__title-box {
+            &  div.ci__stat-block {
+              margin:nth($gutter,3) 0 0 0;
+            }
+            & h2 {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  section.development {
+    // C SECTIONS
+    & > div.bgimage {
+        @include bgimage;
+    }
+    & h2 {
+      & > span {
+        color:rgba($brand_colors-white, 1.0);
+      }
+    }
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      position:relative;
+      &-element {
+        &-copy{
+          color:rgba($brand_colors-white, 1.0);
+          & > p {
+           color:rgba($brand_colors-white, 1.0);
+           & > span {
+             font-weight:900;
+             color:rgba($brand_colors-white, 1.0);
+             & > a {
+               color:rgba($brand_colors-white, 1.0);
+               &:hover, &:focus {
+                 color:rgba($brand_colors-red, 1.0);
+               }
+             }
+           }
+           &:last-of-type{
+             margin:0 0 0 0;
+           }
+          }
+        }
+        &:nth-child(1) {//copy
+          flex:1;
+          order: 2;
+          width: $columnCopy;
+          margin:0 0 0 $copyGutter;
+        }
+        &:nth-child(2) {//title
+          order: 1;
+          margin: 0 0 0 0;
+          width: auto;
+          & > div.ci__title-box {
+            &  div.ci__stat-block {
+              margin:nth($gutter,1) 0 0 0;
+            }
+          }
+        }
+      }
+    }
+    & div.ci__wrapper-element-fullwidth {
+      width:$sectionWidth;
+      background:rgba($brand_colors-red, 1.0);
+      position:relative;
+      z-index:10;
+      margin:0 auto nth($gutter,6) auto;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        padding:1vw 0;
+        & > div {
+          align-items: center;
+          justify-content: center;
+          padding:nth($gutter,1) nth($gutter,1);
+          flex:1;
+          width: 32%;
+          text-align:center;
+          color:rgba($brand_colors-white, 1.0);
+          border-right:1px solid rgba($brand_colors-white, 1.0);
+          &:last-of-type {
+            border-right:none;
+          }
+          & > h4 {
+            @include font-9b-c;
+            text-transform: uppercase;
+          }
+          @media only screen and (max-width: nth($breakpoint,1)){
+            & > h4 {
+             @include font-6b-c;
+            }
+          }
+          @media only screen and (max-width: nth($breakpoint,2)){
+            & > h4 {
+             @include font-5b-c;
+            }
+          }
+          & > small {
+            @include font-5r-c;
+            width:90%;
+          }
+          @media only screen and (max-width: nth($breakpoint,1)){
+            & > small {
+              @include font-3r-c;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  // COLLEGE PREPARATION
+  section.preparation {
+    // C SECTIONS
+    background: rgba($brand_colors-beige, 0.3);
+    & .ci__wrapper {
+      padding: nth($gutter,6) 0 nth($gutter,6) 0;
+      margin: 0 auto 0 auto;
+      width:$sectionWidth;
+      &-element {
+        &-copy{
+          & > div.ci__stat-block-large {
+            @include stat-block-large;
+            & > div.ci__stat-wrap {
+              @include stat-block-large-wrap;
+              & > div {
+                & > small {
+                  text-transform: inherit;
+                }
+              }
+            }
+          }
+        }
+        &:first-child {//copy
+          flex:1;
+          order: 2;
+          width: $columnCopy;
+          margin:0 0 0 $copyGutter;
+        }
+        &:last-child {//title
+          order: 1;
+          margin: 0 0 0 0;
+          width: auto;
+          & > div.ci__title-box {
+            &  div.ci__stat-block {
+              margin:nth($gutter,3) 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: nth($breakpoint,2)){//959px
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $columnCopy: 90vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // HERO SECTION
+    section.hero {
+      & > div.herocopy {
+        & > div {
+          margin:0 10vw;
+        }
+      }
+    }
+    // A SECTIONS
+    // INVESTING IN BOSTON
+    section.investing {
+      // A SECTIONS
+      & .ci__wrapper {
+        margin-bottom:nth($gutter,2);
+        width: $sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+              & > div.ci__stat-block-large {
+                margin:nth($gutter,2) 0 nth($gutter,2) 0;
+                & > div.ci__stat-wrap {
+                  padding: nth($gutter,2) 0;
+                }
+              }
+          }
+          &:first-child {//copy
+            order: 2;
+            width:$columnCopy;
+            margin:0 auto;
+          }
+          &:last-child {//img
+            order: 1;
+            width: $columnImg;
+            height:350px;
+            margin:$imgGutter;
+          }
+        }
+      }
+    }
+
+
+    // TRANSFORMING THE COLUMBUS CORRIDOR
+    section.transforming {
+      // A SECTIONS
+      background: rgba($brand_colors-beige, 0.3);
+      &  h2 {
+        & > span {
+          margin:nth($gutter,2) 0 0 0;
+        }
+      }
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        margin:0 auto;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > div.ci__title-box {
+              width:100%;
+              display:flex;
+              flex-wrap: nowrap;
+              &  div.ci__stat-block {
+                margin:0 nth($gutter,2) 0 0;
+              }
+            }
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,2);
+              }
+            }
+          }
+          &:first-child {//copy
+            flex: 1;
+            order: 2;
+            width:$columnCopy;
+            margin:0 auto;
+          }
+          &:last-child {//img
+            order: 1;
+            margin: 0 0 0 0;
+            width: $columnImg;
+            height: 350px;
+            margin:0 $imgGutter $imgGutter $imgGutter;
+          }
+        }
+      }
+    }
+
+
+    // AN ENDURING PARTNERSHIP
+    section.partnership {
+      // A SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        margin:0 auto;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            width:auto;
+            & p {
+              &:first-of-type {
+                margin-top:nth($gutter,2);
+              }
+            }
+            & > div.ci__stat-block-large {
+              margin-top:nth($gutter,2);
+              & > div.ci__stat-wrap {
+                padding: nth($gutter,2) 0;
+              }
+            }
+          }
+          &:first-child {
+            flex: 1;
+            order: 2;
+            margin:0 auto;
+            width: $columnCopy;
+          }
+          &:last-child {
+            order: 1;
+            width: $columnImg;
+            height: 350px;
+            margin:0 $imgGutter nth($gutter,2) $imgGutter;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $colImgHeight: 50vw;
+    $columnCopy: 90vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // COMMUNITY SERVICE
+    section.community {
+      // B SECTIONS
+
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        margin:0 auto;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > ul {
+              & > li {
+
+              }
+            }
+            & > div.ci__title-box {
+              width:100%;
+              display:flex;
+              flex-wrap: nowrap;
+              margin-bottom:nth($gutter,2);
+              &  div.ci__stat-block {
+                margin:0 nth($gutter,2) 0 0;
+              }
+            }
+          }
+          &:first-child {//copy
+            flex:1;
+            order: 2;
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:last-child {//img/title
+            order: 1;
+            margin: 0 0 nth($gutter,1) 3vw;
+            width: $columnImg;
+            & h2 {
+              display: none;
+            }
+            & > div {
+              width:$columnImg;
+              height:$colImgHeight;
+              z-index:0;
+              position:relative;
+              margin-top:0;
+              //margin:$copyGutter;
+              & > div.bgimage {
+                @include bgimage;
+                top:0;
+                left:0;
+              }
+              & > div.ci__title-box {
+                position:relative;
+                z-index:100;
+                display:none;
+                & div.ci__stat-block {
+                  margin:0 0 0 0;
+                  display:none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    // MUNICIPAL SUPPORT
+    section.municipal {
+      // B SECTIONS
+
+      &  h2 {
+        & > span {
+          margin:nth($gutter,3) 0 0 0;
+        }
+      }
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        margin:0 auto;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & p {
+              margin-top:20px;
+            }
+          }
+          &:first-child {
+            flex:1;
+            order: 2;
+            width: $columnCopy;
+            margin:0 $copyGutter 0 $copyGutter;
+          }
+          &:last-child {
+            order: 1;
+            margin:0 auto;
+            width: $columnImg;
+            height: $colImgHeight;
+
+          }
+        }
+      }
+    }
+
+
+    // IN-KIND CONTRIBUTIONS
+    section.contributions {
+      // B SECTIONS
+        & .ci__wrapper {
+          padding: nth($gutter,1) 0 nth($gutter,1) 0;
+          width: $sectionWidth;
+          margin:0 auto;
+          &-element {
+            &-copy{
+              margin:0 $copyGutter 0 $copyGutter;
+              & > div.ci__stat-block-large {
+                & div.ci__stat-wrap {
+                  padding: nth($gutter,2) 0;
+                }
+              }
+              & h2 {
+                display:block;
+                padding-bottom:45px;
+                & > span {
+                  margin-top:nth($gutter,2);
+                }
+              }
+              & > p {
+               margin:nth($gutter,2) 0 0 0;
+              }
+
+            }
+            &:first-child {//copy
+              order: 2;
+              width: $columnCopy;
+              margin:0 0 0 $copyGutter;
+            }
+            &:last-child {//img/title
+              order: 1;
+              margin: 0 auto;
+              width: $columnImg;
+              & h2 {
+                display:none;
+              }
+              & > div {
+                width:$columnImg;
+                height: $colImgHeight;
+                margin-top:0;
+                & > div.bgimage {
+                  top:0;
+                }
+
+              }
+            }
+          }
+        }
+    }
+
+
+    // ECONOMIC IMPACT
+    section.economic {
+      // B SECTIONS
+      background: rgba($brand_colors-black, 1.0);
+      & > div.bgimage {
+        display: none;
+      }
+      & > div.bg-gradient {
+        display: none;
+      }
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        margin:0 auto;
+        &-element {
+
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & p {
+              &:first-of-type{
+                margin-top:nth($gutter,2);
+              }
+            }
+            & > h2 {
+              color:rgba($brand_colors-white,1.0);
+              padding-top:nth($gutter,2);
+              & > span {
+
+                &:after {
+                  border-bottom:5px solid rgba($brand_colors-red,1.0);
+                }
+              }
+            }
+
+          }
+          &:first-child {
+            width:$columnCopy;
+            flex:1;
+            order: 2;
+            margin:0 auto;
+          }
+          &:last-child {
+            order: 1;
+            display:block;
+            margin:0 auto;
+            width: $columnImg;
+            height: $colImgHeight;
+            & > div.bgimage {
+              @include bgimage;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $colImgHeight: 50vw;
+    $columnCopy: 90vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // FULL TUITION SCHOLARSHIPS
+    section.scholarships {
+      // C SECTIONS
+      background: rgba($brand_colors-white, 1.0);
+      & > div.bgimage {
+          @include bgimage;
+      }
+      & h2 {
+        display: none;
+      }
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        margin: 0 auto 0 auto;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin: 0 $copyGutter 0 $copyGutter;
+            & > div.ci__stat-block-large {
+              & > div.ci__stat-wrap {
+                padding:nth($gutter,2) 0;
+                & > div {
+                  & > small {
+                  }
+                }
+              }
+            }
+          }
+          &:first-child {//copy
+            flex:1;
+            order: 2;
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:last-child {//title
+            order: 1;
+            margin: 0 $copyGutter nth($gutter,2) $copyGutter;
+            width: $columnCopy;
+            & > div.ci__title-box {
+              margin:0 $copyGutter;
+              width:100%;
+              display:flex;
+              flex-wrap: nowrap;
+              &  div.ci__stat-block {
+                margin:0 nth($gutter,2) 0 0;
+              }
+              & h2 {
+                display:block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    section.development {
+      // C SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,2);
+              }
+            }
+
+          }
+          &:nth-child(1) {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:nth-child(2) {//title
+            display:flex;
+            width:$columnCopy;
+            margin:0 $copyGutter 0 $copyGutter;
+            & h2 {
+              order:2;
+            }
+            & > div.ci__title-box {
+              order:1;
+              margin:0 0 0 $copyGutter;
+              &  div.ci__stat-block {
+                margin:0 nth($gutter,2) 0 0;
+              }
+            }
+          }
+        }
+      }
+      & div.ci__wrapper-element-fullwidth {
+        width:$columnCopy;
+        background:none;
+        margin:0 auto nth($gutter,2) auto;
+        & > div {
+          display: block;
+          padding:1vw 0;
+          margin:0 0 0 $copyGutter;
+          width:($columnCopy - 10);
+          & > div {
+            padding:nth($gutter,2) nth($gutter,2);
+            width: 100%;
+            border-right:none;
+            background:rgba($brand_colors-red, 1.0);
+            margin-bottom:nth($gutter,2);
+            &:last-of-type {
+              margin-bottom:0;
+            }
+          }
+        }
+      }
+    }
+
+
+
+    // COLLEGE PREPARATION
+    section.preparation {
+      // C SECTIONS
+      background: rgba($brand_colors-beige, 0.3);
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        margin:0 auto;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > div.ci__stat-block-large {
+              & div.ci__stat-wrap {
+                padding: nth($gutter,2) 0;
+              }
+            }
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,2);
+              }
+            }
+
+          }
+          &:nth-child(1) {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:nth-child(2) {//title
+            display:flex;
+            width:$columnCopy;
+            margin:0 $copyGutter 0 $copyGutter;
+            & h2 {
+              order:2;
+            }
+            & > div.ci__title-box {
+              order:1;
+              margin:0 0 0 $copyGutter;
+              &  div.ci__stat-block {
+                margin:0 nth($gutter,2) 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: nth($breakpoint,3)){//620px
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $columnCopy: 92vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // HERO SECTION
+    section.hero {
+      & > div.herocopy {
+        width:$columnCopy;
+        & > div {
+          width:$columnCopy;
+        }
+      }
+    }
+
+    // A SECTIONS
+
+    // INVESTING IN BOSTON
+    section.investing {
+      // A SECTIONS
+      & .ci__wrapper {
+        margin-bottom:nth($gutter,1);
+        width: $sectionWidth;
+        &-element {
+          &-copy{
+            margin:nth($gutter,3) $copyGutter 0 $copyGutter;
+              & > div.ci__stat-block-large {
+                margin:nth($gutter,3) 0 nth($gutter,3) 0;
+              }
+          }
+          &:first-child {//copy
+            width:$columnCopy;
+          }
+          &:last-child {//img
+            width: $columnImg;
+            margin:$imgGutter;
+          }
+        }
+      }
+    }
+
+
+    // TRANSFORMING THE COLUMBUS CORRIDOR
+    section.transforming {
+      // A SECTIONS
+
+      &  h2 {
+        & > span {
+          margin:nth($gutter,3) 0 0 0;
+        }
+      }
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > div.ci__title-box {
+              flex-wrap:wrap;
+              // margin-top:30px;
+              &  div.ci__stat-block {
+                margin:nth($gutter,1) nth($gutter,3) 0 0;
+                order:2;
+                width:100%;
+              }
+            }
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+          }
+          &:first-child {//copy
+            width:$columnCopy;
+          }
+          &:last-child {//img
+            width: $columnImg;
+            margin:$imgGutter;
+          }
+        }
+      }
+    }
+
+
+    // AN ENDURING PARTNERSHIP
+    section.partnership {
+      // A SECTIONS
+      & .ci__wrapper {
+        width: $sectionWidth;
+        padding: nth($gutter,1) 0 nth($gutter,3) 0;
+        &-element {
+          width: $columnCopy;
+          &-copy{
+            margin:nth($gutter,3) $copyGutter nth($gutter,3) $copyGutter;
+            width:auto;
+            & p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+            & > div.ci__stat-block-large {
+              margin-top:nth($gutter,3);
+              & > div.ci__stat-wrap {
+                padding:nth($gutter,3) 0;
+              }
+            }
+          }
+          &:last-child {
+            width: $columnImg;
+            margin:0 $imgGutter $imgGutter $imgGutter;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $colImgHeight: 50vw;
+    $columnCopy: 92vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // COMMUNITY SERVICE
+    section.community {
+      // B SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width: $sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > div.ci__title-box {
+              flex-wrap:wrap;
+              margin-bottom:nth($gutter,3);
+              &  div.ci__stat-block {
+                margin:nth($gutter,1) 0 0 0;
+                order:2;
+                width:100%;
+              }
+            }
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+          }
+          &:first-child {//copy
+            width:$columnCopy;
+            margin:0 auto;
+          }
+          &:last-child {//img
+            width: $columnImg;
+            margin:$imgGutter;
+          }
+        }
+      }
+    }
+
+
+    // MUNICIPAL SUPPORT
+    section.municipal {
+      // B SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+          }
+          & p {
+            &:first-of-type{
+              margin-top:nth($gutter,3);
+            }
+          }
+          &:first-child {
+            width: $columnCopy;
+            margin:0 $copyGutter 0 $copyGutter;
+          }
+          &:last-child {
+            width: $columnImg;
+            height: $colImgHeight;
+          }
+        }
+      }
+    }
+
+
+    // IN-KIND CONTRIBUTIONS
+    section.contributions {
+      // B SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,3) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & h2 {
+              & > span {
+                margin-top:nth($gutter,1);
+              }
+            }
+            & > p {
+             margin:nth($gutter,3) 0 0 0;
+            }
+          }
+          &:first-child {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:last-child {//img/title
+            width: $columnImg;
+            & > div {
+              width:$columnImg;
+              height: $colImgHeight;
+              margin-top:0;
+              & > div.bgimage {
+                top:nth($gutter,3);
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    // ECONOMIC IMPACT
+    section.economic {
+      // B SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+            & > h2 {
+              padding-top:nth($gutter,3);
+            }
+          }
+          &:first-child {
+            width:$columnCopy;
+          }
+          &:last-child {
+            width: $columnImg;
+            height: $colImgHeight;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main {
+    $columns:2;
+    $sectionWidth: 100vw;//100vw
+    $columnImg: 94vw;//40vw
+    $colImgHeight: 50vw;
+    $columnCopy: 92vw;//40vw
+    $copyGutter: (($sectionWidth - $columnCopy ) / $columns);
+    $imgGutter: (($sectionWidth - $columnImg ) / $columns);
+    // FULL TUITION SCHOLARSHIPS
+    section.scholarships {
+      // C SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin: 0 $copyGutter 0 $copyGutter;
+            & > div.ci__stat-block-large {
+              margin-top:nth($gutter,3);
+              & > div.ci__stat-wrap {
+                padding:nth($gutter,3) 0;
+                & > div {
+                  & > small {
+                  }
+                }
+              }
+            }
+          }
+          &:first-child {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:last-child {//title
+            margin: 0 $copyGutter $copyGutter $copyGutter;
+            width: $columnCopy;
+            & > div.ci__title-box {
+              margin:0 $copyGutter;
+              flex-wrap: wrap;
+              &  div.ci__stat-block {
+                margin:nth($gutter,1) nth($gutter,3) 0 0;
+                order:2;
+                width:100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    section.development {
+      // C SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+          }
+          &:nth-child(1) {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:nth-child(2) {//title
+            width:82vw;
+            margin:0 8vw;
+            display:block;
+            & h2 {
+              order:1;
+            }
+            & > div.ci__title-box {
+              margin:nth($gutter,1) 0 0 0;
+              flex-wrap: wrap;
+              &  div.ci__stat-block {
+                margin:0 0 0 0;
+                order:2;
+                width:100%;
+              }
+            }
+          }
+        }
+      }
+      & div.ci__wrapper-element-fullwidth {
+        width:$columnCopy;
+        margin:0 auto nth($gutter,1) auto;
+        & > div {
+          margin:0 0 0 $copyGutter;
+          width:($columnCopy - 10);
+          & > div {
+            padding:nth($gutter,3) nth($gutter,3);
+            margin-bottom:nth($gutter,3);
+          }
+        }
+      }
+    }
+
+
+
+    // COLLEGE PREPARATION
+    section.preparation {
+      // C SECTIONS
+      & .ci__wrapper {
+        padding: nth($gutter,1) 0 nth($gutter,1) 0;
+        width:$sectionWidth;
+        &-element {
+          &-copy{
+            margin:0 $copyGutter 0 $copyGutter;
+            & > p {
+              &:first-of-type {
+                margin-top:nth($gutter,3);
+              }
+            }
+            & > div.ci__stat-block-large {
+              & > div.ci__stat-wrap {
+                padding:nth($gutter,3) 0;
+              }
+            }
+          }
+          &:nth-child(1) {//copy
+            width: $columnCopy;
+            margin:0 0 0 $copyGutter;
+          }
+          &:nth-child(2) {//title
+            width:82vw;
+            margin:0 8vw;
+            display:block;
+            & h2 {
+              order:1;
+            }
+            & > div.ci__title-box {
+              margin:nth($gutter,1) 0 0 0;
+              flex-wrap: wrap;
+              &  div.ci__stat-block {
+                margin:0 0 0 0;
+                order:2;
+                width:100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
