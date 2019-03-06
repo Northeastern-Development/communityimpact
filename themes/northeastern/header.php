@@ -93,7 +93,7 @@
 
 					<!-- data sheet button -->
 					<div class="data-button">
-						<a href="<?php echo home_url(); ?>/wp-content/uploads/data-sheet.pdf" target="_blank" title="click here to download the data sheet" aria-label="click here to download the data sheet">data sheet</a>
+						<a href="<?php echo home_url(); ?>/wp-content/uploads/data-sheet.pdf" target="_blank" title="click here to download the community imapact 2018 data sheet" aria-label="click here to download the community imapact 2018 data sheet">data sheet</a>
 					</div>
 
 					<!-- mobile nav -->
