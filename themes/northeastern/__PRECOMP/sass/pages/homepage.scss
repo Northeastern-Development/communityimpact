@@ -569,6 +569,7 @@ main {
           }
           & > h3 {
             @include font-9b-c;
+            // line-height:5.0rem;
             text-transform: uppercase;
           }
           @media only screen and (max-width: nth($breakpoint,1)){
@@ -684,7 +685,7 @@ main {
         &-element {
           &-copy{
             margin:0 $copyGutter 0 $copyGutter;
-            
+
 
               & > div.ci__stat-block-large {
                 margin:nth($gutter,2) 0 nth($gutter,2) 0;
